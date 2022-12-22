@@ -44,10 +44,12 @@ function __check_nvm --description 'Auto source nvm'
   end
 end
 
-function __auto_check_nvm --on-variable PWD --description 'Auto source venv'
+function __auto_check_nvm --on-variable PWD --description 'Auto chose nvm'
   __check_nvm
 end
 
-__check_nvm
-__check_pyenv
+if status is-interactive
+    __check_nvm
+    __check_pyenv
+end
 
