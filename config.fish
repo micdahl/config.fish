@@ -30,7 +30,7 @@ function __check_pyenv --description 'Auto source venv'
 end
 
 function __auto_check_pyenv --on-variable PWD --description 'Auto source venv'
-  __check_nvm
+  __check_pyenv
 end
 
 function __check_nvm --description 'Auto source nvm'
