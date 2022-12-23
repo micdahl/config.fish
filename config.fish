@@ -51,5 +51,8 @@ end
 if status is-interactive
     __check_nvm
     __check_pyenv
+    if test "$(nvm current)" = "none"
+        nvm use --lts
+    end 
 end
 
