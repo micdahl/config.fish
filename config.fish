@@ -6,6 +6,7 @@ set -g theme_nerd_fonts yes
 set -Ux fish_user_paths $HOME/.rbenv/bin $fish_user_paths
 status --is-interactive; and rbenv init - fish | source
 alias vim nvim
+set -gx EDITOR (type -p nvim)
 
 function __check_pyenv --description 'Auto source venv'
   status --is-command-substitution; and return
